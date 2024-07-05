@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+/* Import the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  column-count: 3;
+  max-width: 1700px;
+  margin: 0 auto;
+  gap: 0.6rem;
+  overflow: hidden;
+  padding: 0 2rem; /* Adjust padding as needed */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+img {
+  border-radius: 0.2rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 0.6rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
+  max-width: 1700px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0 2rem; /* Adjust padding as needed */
+
+}
+
+.header-img {
+  padding-top: 1em;
+  width: 100px;
+
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.rem;
+  margin-left: 4em;
+}
+
+a:hover {
+  border-bottom: 2px solid red;
+}
+
+button {
+  background-color: black;
   color: white;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  padding: 0.312em 0.7em;
+  margin-left: auto;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* .col {
+  animation: scroll 80s linear infinite; /* Adjust duration as needed */
+
+
+/* .col:nth-child(even) {
+  animation-direction: reverse; /* Alternate scroll direction */
+
+
+@media (max-width: 1024px) {
+  .container {
+    column-count: 2
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  .container {
+    column-count: 1
+  }
+  a {
+    padding-left: 3em;
   }
 }
