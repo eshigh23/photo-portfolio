@@ -4,6 +4,9 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+p {
+  margin: 0;
+}
 
 .container {
   column-count: 3;
@@ -11,7 +14,8 @@ body {
   margin: 0 auto;
   gap: 0.6rem;
   overflow: hidden;
-  padding: 0 2rem; /* Adjust padding as needed */
+  padding: 0 2rem; 
+  min-width: 400px;
 }
 
 img {
@@ -20,6 +24,7 @@ img {
   height: auto;
   object-fit: cover;
   margin-bottom: 0.6rem;
+
 }
 
 @keyframes scroll {
@@ -36,8 +41,40 @@ img {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  padding: 0 2rem; /* Adjust padding as needed */
+  padding: 0rem 2rem;
+  padding-bottom: 2rem;
 
+}
+
+.dropdown-toggle {
+  position: relative;
+  color: black;
+  letter-spacing: .1em;
+  border-radius: .15em;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 4em;
+  cursor: pointer;
+  
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  margin-left: 4em;
+  background-color: rgba(0, 0, 0, 0.075);
+  padding: .5em;
+  border: 1px solid grey;
+  min-width: 200px;
+}
+
+.dropdown-content p {
+  color: black;
 }
 
 .header-img {
@@ -51,10 +88,11 @@ a {
   color: black;
   font-size: 1.rem;
   margin-left: 4em;
+  letter-spacing: .1em;
 }
 
 a:hover {
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #DB4A2B;
 }
 
 button {
@@ -67,8 +105,9 @@ button {
 }
 
 
-/* .col {
-  animation: scroll 80s linear infinite; /* Adjust duration as needed */
+.col {
+  animation: scroll 80s linear infinite; 
+}
 
 
 /* .col:nth-child(even) {
@@ -79,13 +118,32 @@ button {
   .container {
     column-count: 2
   }
+  a, .dropdown-toggle, .dropdown-content {
+    margin-left: 2em;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     column-count: 1
   }
-  a {
-    padding-left: 3em;
-  }
 }
+
+@media (max-width: 611px) {
+  .nav-links {
+    flex-direction: column;
+    padding-top: 0em;
+    gap: 0px;
+    font-size: .95rem;
+
+  }
+  a, .dropdown-toggle, .dropdown-content {
+    margin-left: 1em;
+    font-size: .95rem;
+  }
+  .dropdown-content{
+    padding: 5px;
+  }
+
+}
+
